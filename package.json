@@ -1,0 +1,31 @@
+{
+  "name": "kube-controller",
+  "version": "1.0.0",
+  "description": "kubernetes auto loading app",
+  "main": "index.ts",
+  "scripts": {
+    "start": "ts-node-dev --respawn --transpileOnly ./src/index.ts",
+    "dbr:int": "set NODE_ENV=int && ts-node-dev --respawn --transpileOnly ./src/index.ts",
+    "dbr:qa": "set NODE_ENV=qa && ts-node-dev --respawn --transpileOnly ./src/index.ts",
+    "dbr:vabf": "set NODE_ENV=uat && ts-node-dev --respawn --transpileOnly ./src/index.ts",
+    "dbr:prd": "set NODE_ENV=prd && ts-node-dev --respawn --transpileOnly ./src/index.ts",
+    "test": "test"
+  },
+  "keywords": [
+    "puppeter",
+    "kubernetes",
+    "typescript"
+  ],
+  "author": "Orni2Thorinque",
+  "license": "ISC",
+  "dependencies": {
+    "puppeteer": "^2.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "~8.9.4",
+    "@types/puppeteer": "^2.0.0",
+    "tslint": "~5.15.0",
+    "ts-node-dev": "^1.0.0-pre.40",
+    "typescript": "~3.4.3"
+  }
+}
